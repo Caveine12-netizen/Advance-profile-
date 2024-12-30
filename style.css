@@ -1,0 +1,161 @@
+/* Umum */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('./images/thumb2.jpeg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Container Profil */
+.profile-container {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  width: 350px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Foto Profil */
+.profile-container img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+/* Judul Profil */
+.profile-container h2 {
+  margin: 10px 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Deskripsi */
+.profile-container p {
+  color: #555;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Tabs */
+.tabs {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.tab {
+  background: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.tab.active {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Konten Dinamis */
+.content {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+.content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+/* Timeline */
+.timeline {
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #007bff;
+}
+
+.timeline-item {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: #007bff;
+  border-radius: 50%;
+}
+
+/* Tautan Sosial Media */
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-links a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.social-links a img:hover {
+  transform: scale(1.2);
+}
+
+/* Tombol WhatsApp */
+.whatsapp-button {
+  margin-top: 15px;
+  background-color: #25d366;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.whatsapp-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.whatsapp-button:hover {
+  background-color: #20ba5a;
+  transform: scale(1.05);
+}
