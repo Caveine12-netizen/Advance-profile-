@@ -8,7 +8,7 @@ body, h1, h2, h3, p, div, a, img {
 /* Gaya untuk body */
 body {
   font-family: Arial, sans-serif;
-  background: url('/thumb2.jpeg') no-repeat center center fixed; /* Ganti dengan path gambar background Anda */
+  background: url('/images/thumb2.jpeg') no-repeat center center fixed; /* Ganti dengan path gambar background Anda */
   background-size: cover;
   color: #333;
   line-height: 1.6;
@@ -138,18 +138,21 @@ body::before {
 }
 
 /* Tombol WhatsApp */
+.whatsapp-button {
+  margin-top: 15px;
+}
+
 .whatsapp-button a {
   display: inline-block;
-  padding: 10px 20px;
-  margin-top: 15px;
+  padding: 12px 24px;
   background: #25d366;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
+  border-radius: 8px;
   transition: transform 0.3s ease, background 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
 }
 
 .whatsapp-button a:hover {
