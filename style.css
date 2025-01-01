@@ -8,7 +8,7 @@ body, h1, h2, h3, p, div, a, img {
 /* Gaya untuk body */
 body {
   font-family: Arial, sans-serif;
-  background: url('/images/thumb2.jpeg') no-repeat center center fixed; /* Ganti dengan path gambar background Anda */
+  background: url('/thumb2.jpeg') no-repeat center center fixed; /* Ganti dengan path gambar background Anda */
   background-size: cover;
   color: #333;
   line-height: 1.6;
