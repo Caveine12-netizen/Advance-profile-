@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profil Hisyam AK</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- Musik -->
   <audio id="background-music" loop>
-    <source src="audio.mp3" type="audio/mpeg">
+    <source src="/audio.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
+  <!-- Kontainer Profil -->
   <div class="profile-container">
-    <!-- Foto Profil dari File Lokal -->
-    <img src="thumb.jpeg" class="foto-profil" alt="Foto Profil" id="profile-picture">
+    <!-- Foto Profil -->
+    <img src="/thumb.jpeg" class="foto-profil" alt="Foto Profil" id="profile-picture">
     <h2>Hisyam AK <span>🇮🇩</span></h2>
     <p>AKU MASIH PEMULA</p>
 
@@ -29,7 +30,7 @@
     <!-- Konten Dinamis -->
     <div class="content" id="content">
       <h3>Tentang Saya</h3>
-      <p>Halo, Saya Hisyam. Saya pemula di dunia bot WhatsApp. karakter anime favorit saya adalah Gojo Satoru.</p>
+      <p>Halo, Saya Hisyam. Saya pemula di dunia bot WhatsApp. Karakter anime favorit saya adalah Gojo Satoru.</p>
 
       <!-- Sosial Media -->
       <div class="social-links">
@@ -43,12 +44,13 @@
     </div>
   </div>
 
+  <!-- JavaScript -->
   <script>
-    // Ambil elemen audio dan gambar profil
+    // Elemen audio dan gambar profil
     const profilePicture = document.getElementById('profile-picture');
     const backgroundMusic = document.getElementById('background-music');
 
-    // Fungsi untuk memutar atau menghentikan musik
+    // Fungsi untuk memutar/menghentikan musik saat gambar profil diklik
     profilePicture.addEventListener('click', () => {
       if (backgroundMusic.paused) {
         backgroundMusic.play();
@@ -57,7 +59,7 @@
       }
     });
 
-    // Fungsi untuk mengatur tab aktif dan konten dinamis
+    // Fungsi untuk menampilkan konten berdasarkan tab yang dipilih
     function showContent(tab) {
       const tabs = document.querySelectorAll('.tab');
       tabs.forEach(tabElement => tabElement.classList.remove('active'));
@@ -66,7 +68,7 @@
       if (tab === 'tentang') {
         content.innerHTML = `
           <h3>Tentang Saya</h3>
-          <p>Halo, Saya Hisyam. Saya pemula di dunia bot WhatsApp. karakter anime favorit saya adalah Gojo Satoru.</p>
+          <p>Halo, Saya Hisyam. Saya pemula di dunia bot WhatsApp. Karakter anime favorit saya adalah Gojo Satoru.</p>
         `;
         tabs[0].classList.add('active');
       } else if (tab === 'perjalanan') {
@@ -88,9 +90,9 @@
           <p>Email: <strong>hisyamak4@gmail.com</strong></p>
           <p>Lokasi: Indonesia, Jawa Tengah, Sukoharjo</p>
           <p>Telepon: <a href="https://wa.me/6288215153650" target="_blank">+62 882-1515-3650</a></p>
-          <button class="whatsapp-button">
-            <a href="https://wa.me/6288215153650" target="_blank">Hubungi Saya di WhatsApp</a>
-          </button>
+          <div class="hubungi-button">
+  <a href="https://wa.me/6288215153650" target="_blank">Hubungi Saya</a>
+</div>
         `;
         tabs[2].classList.add('active');
       }
